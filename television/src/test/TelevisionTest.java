@@ -35,6 +35,7 @@ class TelevisionTest {
 		
 		//television instance works ?
 		Television television  = Television.getInstance();
+		assertEquals(true, television != null);
 	}
 	
 	@Test
