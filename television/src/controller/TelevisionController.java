@@ -4,23 +4,36 @@ import model.STATE;
 
 public class TelevisionController {
 
+	
+	/**
+	 * @variable: status: state of the T.V.
+	 * @variable: instanciate: to know if the object was created one time. 
+	 */
 	private static STATE status;
-	private static boolean instanciation = false;
+	private static boolean instanciate = false;
 	private static TelevisionController tc;
 	
 	private TelevisionController() {
-		if(!instanciation) {
+		if(!instanciate) {
 			tc = this;
 		}
-		
 	}
 	
+	/**
+	 * @author aribo
+	 * @return STATE: the status of the T.V
+	 */
 	public STATE getStatus() {
 		return status;
 	}
 	
+	/**
+	 * @author aribo
+	 * This class implement the design pattern singleton
+	 * @return
+	 */
 	public static TelevisionController getInstance() {
-		if(!instanciation)new TelevisionController();
+		if(!instanciate)new TelevisionController();
 		return tc;
 	}
 	

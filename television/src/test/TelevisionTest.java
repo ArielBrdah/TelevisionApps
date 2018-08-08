@@ -31,13 +31,16 @@ class TelevisionTest {
 	
 	@Test
 	void televisionInstanciation() {
+		
+		//television instance works ?
 		Television television  = Television.getInstance();
-		if(television == null)
-			fail("Echec lors de la creation de l'objet !");
+		assertEquals(true, television != null);
 	}
 	
 	@Test
 	void televisionONorOFF() {
+		
+		//did switch worked ?
 		Television television  = Television.getInstance();
 		television.on();
 		assertEquals(STATE.ON,television.getStatus());

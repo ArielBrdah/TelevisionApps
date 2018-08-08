@@ -2,6 +2,11 @@ package model;
 
 import controller.TelevisionController;
 
+/***
+ * This class implement the singleton design pattern
+ * @author aribo
+ *
+ */
 public class Television {
 	
 	private TelevisionController televisionCtrl;
