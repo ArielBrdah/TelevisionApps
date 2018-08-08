@@ -29,12 +29,12 @@ class TelevisionTest {
 	void tearDown() throws Exception {
 	}
 	
+	// this test is not good
 	@Test
 	void televisionInstanciation() {
 		
 		//television instance works ?
 		Television television  = Television.getInstance();
-		assertEquals(true, television != null);
 	}
 	
 	@Test
